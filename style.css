@@ -1,0 +1,478 @@
+/** @format */
+
+:root {
+  /* Color */
+  --color-white: #ffffff;
+  --color-light-white: #eeeeee;
+  --color-dar-white: #bdbdbd;
+  --color-red: #fa3400;
+  --color-black: #4d4d4d;
+  --color-dark-grey: #4d4d4d;
+  --color-light-grey: #7c7979;
+  --color-blue: #008fff;
+  --color-yellow: #faf9b5;
+  --color-orange: #feb546;
+  --color-black: #000000;
+
+  /* Font size */
+  --font-large: 48px;
+  --font-medium: 28px;
+  --font-regular: 18px;
+  --font-small: 16px;
+  --font-micro: 14px;
+
+  /* Font weight */
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+
+  /* Size */
+  --size-border-radius: 4px;
+
+  /* Animation */
+  --animation-duration: 300ms;
+}
+
+/* Universal Tags */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif Verdana, sans-serif;
+  margin: 0px;
+  cursor: default;
+  /* 텍스트에 마우스 올리면 바뀌니까 */
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-yellow);
+}
+
+ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+button {
+  /* 기본 버튼 모양새 삭제 */
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* 스타일링을 먼저 해두고 하는게 타이포그래피 */
+/* Typography */
+h1 {
+  font-size: var(--font-large);
+  font-weight: var(--weight-bold);
+  color: var(--color-black);
+  margin: 16px 0;
+}
+
+h2 {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-black);
+  margin: 8px 0;
+}
+
+h3 {
+  font-size: var(--font-regular);
+  font-weight: var(--font-regular);
+  color: var(--color-black);
+  margin: 8px 0;
+}
+
+p {
+  font-size: var(--font-regular);
+  font-weight: var(--font-regular);
+  color: var(--color-black);
+  margin: 4px 0;
+}
+
+/* Navbar */
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-blue);
+  align-items: center;
+  color: var(--color-yellow);
+  font-weight: 700;
+  font-size: 17px;
+  padding: 16px;
+}
+
+.navbar__menu {
+  display: flex;
+}
+
+.navbar__logo {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+}
+
+.navbar__menu__item {
+  padding: 8px 8px;
+  margin: 0 4px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.navbar__menu__item.active {
+  border: 1px solid var(--color-dark-pink);
+}
+
+.navbar__menu__item:hover {
+  background-color: #fa7d8a;
+}
+
+.navbar__toggle-btn {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  font-size: 24px;
+  color: var(--color-yellow);
+  display: none;
+}
+
+/* Home */
+#home {
+  background: url("image/sky.png") center/cover no-repeat;
+  padding: 40px;
+  text-align: center;
+}
+
+.home__avatar {
+  widows: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid var(--color-blue);
+}
+
+.home__title,
+.home__description {
+  color: var(--color-black);
+}
+
+.home__contact {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  margin: 24px;
+  padding: 8px 12px;
+  border: 2px solid var(--color-black);
+  border-radius: var(--size-border-radius);
+}
+
+/* Section common */
+.section {
+  padding: 50px;
+  text-align: center;
+  margin: auto;
+  /* 이거 안하니 오른쪽에 margin이 있떠라 */
+}
+
+.section__container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* About */
+.about__majors {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px;
+}
+
+.major__icon {
+  width: 170px;
+  height: 170px;
+  line-height: 170px;
+  /* 중간으로 오게 하기 위해 line-height 씀 */
+  font-size: 70px;
+  background-color: #f7fac6;
+  margin: auto;
+  border: 1px solid var(--color-blue);
+  border-radius: 50%;
+  color: var(--color-blue);
+  margin-bottom: 16px;
+}
+
+.major__icon:hover i {
+  color: var(--color-red);
+  transform: rotate(720deg) scale(1.1);
+  transition: all 0.5s ease-in-out;
+}
+
+.major__title,
+.major__description {
+  color: var(--color-dark-grey);
+}
+
+.major__description {
+  font-size: var(--font-small);
+}
+
+.job {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.job__description {
+  margin: 0 16px;
+  text-align: left;
+}
+
+.job__name,
+.job__period {
+  color: var(--color-light-grey);
+}
+
+.job__name {
+  font-size: var(--font-small);
+}
+
+.job__period {
+  font-size: var(--font-micro);
+}
+
+/* Skill */
+#skills {
+  background-color: var(--color-yellow);
+}
+
+.skillset {
+  display: flex;
+}
+
+.skillset__left {
+  flex-basis: 60%;
+  background-color: #bcff88;
+  box-sizing: border-box;
+}
+
+.skillset__right {
+  flex-basis: 40%;
+  background-color: #83ffda;
+}
+
+.tools {
+  background-color: greenyellow;
+}
+
+.skillset__title {
+  font-size: 30px;
+  font-weight: var(--weight-bold);
+}
+
+.skill__description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  font-size: 22px;
+}
+
+.tools,
+.etc {
+  padding: 20px;
+}
+
+progress {
+  color: gold;
+}
+
+/* Work */
+
+.work__categories {
+  margin: 40px;
+}
+
+.category__btn {
+  border: 1px solid var(--color-dar-white);
+  border-radius: varJ(--size-border-radius);
+  font-size: var(--font-regular);
+  padding: 8px 33px;
+}
+
+.category__btn.active,
+.category__btn:hover {
+  background-color: pink;
+  color: var(--color-yellow);
+}
+
+/* 카테코기버튼이 active 상태의 카테고리 카운트와
+카테고리 버튼이 마우스가 올라왔을때 안에 있는 카테고리 카운트 일때만
+opcaity를 1로 하고 그리고 탑을 원래대로 0으로 한다*/
+.category__btn:active .category__count,
+.category__btn:hover .category__count {
+  opacity: 1;
+  top: 0;
+}
+
+.category__count {
+  background-color: var(--color-orange);
+  border-radius: 50%;
+  color: var(--color-white);
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  display: inline-block;
+  /* SPAN이라 텍스쳐 만큼 배경이 칠해지기 떄문 */
+  position: relative;
+  top: -20px;
+  left: 4px;
+  opacity: 0;
+  position: all var(--animation-duration ease-in-out);
+}
+
+.work__projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 350px;
+  margin: 2px;
+}
+
+#work {
+  background: url("image/project/back.jpg") center/cover;
+}
+
+.project__img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.project__description {
+  background-color: #000000;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all var(--animation-duration) ease-in-out;
+}
+
+.project:hover .project__description {
+  opacity: 0.8;
+  transform: translateY(0px);
+}
+.project__description h3 {
+  color: var(--color-dar-white);
+}
+
+.project__description h3:after {
+  content: "";
+  display: block;
+  position: relative;
+  left: 50%;
+  width: 25px;
+  height: 2px;
+  margin-left: -12px;
+  margin-top: 8px;
+  background-color: var(--color-dar-white);
+}
+
+/* Testimonial */
+#testimonials {
+  background-color: #eefac8;
+}
+
+.testimonials {
+  margin: 40px;
+}
+
+.testimonial {
+  display: flex;
+  justify-content: center;
+}
+
+.roadmap__picture {
+  width: 200px;
+  height: 500px;
+}
+
+.roadmap__talk {
+  padding: 18px;
+  background-color: var(--color-yellow);
+  border-radius: var(--size-border-radius);
+}
+
+.roadmap__talk p {
+  font-size: 35px;
+}
+
+.testimonial__avatar:ntd-child(odd) {
+  margin-left: 40px;
+}
+
+/* Contact */
+#contact {
+  background-color: lightblue;
+}
+
+.contact__title,
+.contact__email {
+  color: black;
+}
+
+.contact__title {
+  margin: 20px;
+}
+
+.contact__links {
+  font-size: 40px;
+}
+
+.contact__links i:hover {
+  transform: scale(1.3);
+  color: var(--color-blue);
+}
+
+.contact__icon {
+  color: red;
+}
+
+/* For below 768px screen width */
+@media screen and (max-width: 768px) {
+  .navbar__toggle-btn {
+    display: block;
+  }
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar__menu {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    /* 이거 안 해주면 좁아서 왼쪽에 몰려있음 */
+    display: none;
+  }
+  .about__majors {
+    flex-direction: column;
+  }
+  .skillset {
+    flex-direction: column;
+  }
+  .project {
+    flex-grow: 1;
+    /* 이건 알아서 화면을 메꿔주는 역할 */
+  }
+}

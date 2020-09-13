@@ -1,0 +1,250 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="I will become Expert developer" />
+    <meta name="author" content="朴主鉉、パクジュヒョン, Park Juhyun, 박주현" />
+    <script src="https://kit.fontawesome.com/6e3b45f19c.js" crossorigin="anonymous"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="image/favicon1.png" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+    <title>Park Portfolio</title>
+  </head>
+  <body>
+    <!-- NavBar -->
+    <nav id="navbar">
+      <div class="navbar__logo"><i class="fas fa-jedi"></i> <a href="#">Park Juhyun</a></div>
+      <div class="navbar__menu">
+        <ul class="navbar__menu">
+          <li class="navbar__menu__item active">Home</li>
+          <li class="navbar__menu__item">About</li>
+          <li class="navbar__menu__item">Skills</li>
+          <li class="navbar__menu__item">My work</li>
+          <li class="navbar__menu__item">Testimonial</li>
+          <li class="navbar__menu__item">Contact</li>
+        </ul>
+      </div>
+      <!-- Toggle button -->
+      <button class="navbar__toggle-btn"><i class="fas fa-bars"></i></button>
+    </nav>
+    <!-- Home -->
+    <section id="home">
+      <img src="image/profile.jpg" alt="Park's photo" class="home__avatar" height="150px" />
+      <h1 class="home__title">
+        Hello, <br />
+        I'm will become Expert Developer
+      </h1>
+      <h2 class="home__description">知識が多い開発者</h2>
+      <button class="home__contact">Contact Me</button>
+    </section>
+    <!-- About -->
+    <section id="about" class="section section__container">
+      <h1>About Me</h1>
+      <p>
+        ERP会社で２０１９年４月から仕事をしてきました。<br />
+        しかし、ERPシステムより、WEB系の仕事がしたくて、一生懸命勉強しています。
+        <br />
+        Javascript, typescript, React, Redux, mobx, HTML, CSS, Scss, Nodejs, express, mongodb,
+        gitなど
+      </p>
+      <div class="about__majors">
+        <div class="major">
+          <div class="major__icon"><i class="fab fa-react"></i><i class="fab fa-js"></i></div>
+          <h2 class="major__title">Front End</h2>
+          <div class="major__description">
+            React, JavaScript, Typescript <br />
+            redux, HTML, CSS, Scss(Sass) など
+          </div>
+        </div>
+        <div class="major">
+          <div class="major__icon"><i class="fab fa-node"></i><i class="fab fa-python"></i></div>
+          <h2 class="major__title">Back End</h2>
+          <div class="major__description">Node.js, Python, Java</div>
+        </div>
+        <div class="major">
+          <div class="major__icon"><i class="fas fa-database"></i></div>
+          <h2 class="major__title">Server</h2>
+          <div class="major__description">MongoDB, Sql Server</div>
+        </div>
+      </div>
+
+      <div class="about__jobs">
+        <div class="job">
+          <img src="image/tecnos.PNG" alt="TECNOS JAPAN" />
+          <div class="job__name">System Engineer</div>
+          <div class="job__description">Intra-Mart, ABAP, Sql server, JP1, PowerCenter</div>
+          <div class="job__period">2019.04.01 ~ 現在</div>
+        </div>
+      </div>
+    </section>
+    <!-- Skills -->
+    <section id="skills" class="section">
+      <div class="section__container">
+        <h1>Skills</h1>
+        <h2>Skills & Attributes</h2>
+        <p>
+          新しいこと, 新しい技術に関心が多く, チームで活動することに慣れています。
+          <br />
+          軍生活のおかげで、忍耐力と体力が強いです。
+        </p>
+        <div class="skillset">
+          <div class="skillset__left">
+            <h3 class="skillset__title">Skills <i class="fas fa-journal-whills"></i></h3>
+            <div class="skill">
+              <div class="skill__description">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>TypeScript</span>
+                <span>React</span>
+                <span>Redux</span>
+                <span>Mobx</span>
+                <br />
+                <span>ETC....</span>
+                <progress></progress>
+              </div>
+            </div>
+          </div>
+          <div class="skillset__right">
+            <div class="tools">
+              <h3 class="skillset__title">Tools <i class="fas fa-tools"></i></h3>
+              <ul class="tools__list">
+                <li><span>Visual Studio</span></li>
+                <li><span>Visual Stuido Code</span></li>
+                <li><span>MongoDb Compass Community </span></li>
+                <li><span>Eclipse</span></li>
+              </ul>
+            </div>
+            <div class="etc">
+              <h3 class="skillset__title">Etc <i class="fas fa-school"></i></h3>
+              <ul class="etc__list">
+                <li><span>Git</span></li>
+                <li><span>Slack</span></li>
+                <li><span>Search</span></li>
+                <li><span>Computer Build</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Work -->
+    <section id="work" class="section">
+      <div class="section__container">
+        <h1>My Project</h1>
+        <div class="work__categories">
+          <button class="category__btn active">All <span class="category__count">11</span></button>
+          <button class="category__btn">FrontEnd <span class="category__count">4</span></button>
+          <button class="category__btn">React <span class="category__count">4</span></button>
+          <button class="category__btn">Tools <span class="category__count">3</span></button>
+        </div>
+
+        <div class="work__projects">
+          <a href="https://github.com/wngus6429?tab=repositories" target="blank" class="project"
+            ><img src="image/project/profile.PNG" alt="My GitHub" class="project__img" />
+            <div class="project__description">
+              <h3>My GitHub</h3>
+              <span>I will Study Forever</span>
+            </div>
+          </a>
+          <a href="https://wngus6429.github.io/parkflix" target="blank" class="project"
+            ><img
+              src="image/project/react1.jpg"
+              alt="Using React, JSX, Styled Component, Router Etc"
+              class="project__img"
+            />
+            <div class="project__description">
+              <h3>Movie TV Search Site</h3>
+              <span>React And Using API</span>
+            </div>
+          </a>
+          <a href="https://wngus6429.github.io/LifeCoding-REDUX/" target="blank" class="project"
+            ><img src="image/project/react2.jpg" alt="Using React, Redux" class="project__img" />
+            <div class="project__description">
+              <h3>Create Read Update Delete</h3>
+              <span>Redux with React</span>
+            </div></a
+          >
+          <a href="https://github.com/wngus6429/ReactNodeYoutube" target="blank" class="project"
+            ><img
+              src="image/project/react3.jpg"
+              alt="Using React, Redux, node.js, mongoDB"
+              class="project__img"
+            />
+            <div class="project__description">
+              <h3>React Youtube</h3>
+              <span>React, Redux, Node.js, MongoDB, <br />　Router, Auth, Router etc</span>
+            </div></a
+          >
+          <a href="https://github.com/wngus6429/YoutubeMake" target="blank" class="project"
+            ><img
+              src="image/project/javascript1.jpg"
+              alt="Using Javascript, nodejs, mongodb"
+              class="project__img"
+            />
+            <div class="project__description">
+              <h3>JavaScript Youtube</h3>
+              <span>JavaScript, Pug, Node.js, Scss, MongoDB, Auth, Router etc</span>
+            </div></a
+          >
+          <a href="https://wngus6429.github.io/JavaScriptMake/" target="blank" class="project"
+            ><img
+              src="image/project/javascript2.jpg"
+              alt="Using Javascript, Weather Api"
+              class="project__img"
+            />
+            <div class="project__description">
+              <h3>JavaScript ToDolist, location, temp</h3>
+              <span>JavaScript, Find your location and temperature</span>
+            </div></a
+          >
+          <a href="https://wngus6429.github.io/kakaoclone2/" target="blank" class="project"
+            ><img src="image/project/kakao.jpg" alt="Using React, Redux" class="project__img" />
+            <div class="project__description">
+              <h3>Kakao Clone, Will be Update</h3>
+              <span>Html and Css</span>
+            </div></a
+          >
+        </div>
+      </div>
+    </section>
+    <section id="testimonials" class="section">
+      <h1>Study Plan(basic)</h1>
+      <h3>FrontEnd 2020 RoadMap</h3>
+      <div class="testimonials">
+        <div class="testimonial">
+          <a href="https://github.com/kamranahmedse/developer-roadmap" target="blank">
+            <img src="image/study/frontend.png" alt="" class="roadmap__picture" />
+          </a>
+          <div class="roadmap__talk">
+            <p>
+              Udemy, <br />
+              Youtube, <br />
+              blog, <br />
+              subscription
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="section">
+      <h1 class="contact__title">Let's talk</h1>
+      <h2 class="contact__email">wngus6429@gmail.com</h2>
+      <h2 class="contact__email">080-8051-8812</h2>
+      <div class="contact__links">
+        <a href="https://github.com/wngus6429?tab=repositories" target="blank" class="contact__icon"
+          ><i class="fab fa-github-square"></i
+        ></a>
+      </div>
+    </section>
+  </body>
+</html>
+
+<!-- font-family: 'Open Sans', sans-serif; -->
