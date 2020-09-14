@@ -41,6 +41,22 @@ document.addEventListener("scroll", () => {
   //   이 방법으로 스타일링 추가 가능함
 });
 
+//Show "arrow up" button when scrolling down
+const arrowUp = document.querySelector(".arrowup");
+document.addEventListener("scroll", () => {
+  if (window.scrollY > homwHeight / 2) {
+    arrowUp.classList.add("visible");
+    // 스크롤 밑으로 하면 화살표 보이게
+  } else {
+    arrowUp.classList.remove("visible");
+  }
+});
+
+//Handle click on the arrow up
+arrowUp.addEventListener("click", () => {
+  scrollIntoView("#home");
+});
+
 //Click ScrollView Method
 function scrollIntoView(seletor) {
   const scrollTo = document.querySelector(seletor);
