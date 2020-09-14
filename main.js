@@ -1,10 +1,5 @@
 /** @format */
 
-hello;
-GainNode;
-gameboold;
-/** @format */
-
 // Make navbar transpaarent when it is on the top
 const navbar = document.querySelector("#navbar");
 const navbarHeight = navbar.getBoundingClientRect().height;
