@@ -32,6 +32,15 @@ contactbtn.addEventListener("click", () => {
   scrollIntoView("#contact");
 });
 
+// Make home slowly fade to transparent as the window scrolls down
+const home = document.querySelector("#home");
+const homwHeight = home.getBoundingClientRect().height;
+document.addEventListener("scroll", () => {
+  //   console.log(1 - window.scrollY / homwHeight);
+  home.style.opacity = 1 - window.scrollY / homwHeight;
+  //   이 방법으로 스타일링 추가 가능함
+});
+
 //Click ScrollView Method
 function scrollIntoView(seletor) {
   const scrollTo = document.querySelector(seletor);
