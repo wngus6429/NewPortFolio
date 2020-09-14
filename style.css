@@ -484,4 +484,10 @@ opcaity를 1로 하고 그리고 탑을 원래대로 0으로 한다*/
     flex-grow: 1;
     /* 이건 알아서 화면을 메꿔주는 역할 */
   }
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 22px;
+  }
 }
