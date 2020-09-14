@@ -106,6 +106,7 @@ p {
   padding: 16px;
   background-color: transparent;
   transition: all var(--animation-duration) ease-in-out;
+  z-index: 1;
 }
 
 #navbar.navbar--dark {
@@ -397,8 +398,8 @@ opcaity를 1로 하고 그리고 탑을 원래대로 0으로 한다*/
   background-color: var(--color-dar-white);
 }
 
-/* Testimonial */
-#testimonials {
+/* study Pan */
+#studyplan {
   background-color: #eefac8;
 }
 
