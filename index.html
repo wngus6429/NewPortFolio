@@ -141,10 +141,18 @@
       <div class="section__container">
         <h1>My Project</h1>
         <div class="work__categories">
-          <button class="category__btn active">All <span class="category__count">11</span></button>
-          <button class="category__btn">FrontEnd <span class="category__count">4</span></button>
-          <button class="category__btn">React <span class="category__count">4</span></button>
-          <button class="category__btn">Tools <span class="category__count">3</span></button>
+          <button class="category__btn active" data-filter="*">
+            All <span class="category__count">9</span>
+          </button>
+          <button class="category__btn" data-filter="frontend">
+            FrontEnd <span class="category__count">3</span>
+          </button>
+          <button class="category__btn" data-filter="fullstack">
+            FullStack <span class="category__count">2</span>
+          </button>
+          <button class="category__btn" data-filter="mobile">
+            Mobile <span class="category__count">3</span>
+          </button>
         </div>
 
         <div class="work__projects">
@@ -155,7 +163,11 @@
               <span>I will Study Forever</span>
             </div>
           </a>
-          <a href="https://wngus6429.github.io/parkflix" target="blank" class="project"
+          <a
+            href="https://wngus6429.github.io/parkflix"
+            target="blank"
+            class="project"
+            data-type="frontend"
             ><img
               src="image/project/react1.jpg"
               alt="Using React, JSX, Styled Component, Router Etc"
@@ -166,14 +178,22 @@
               <span>React And Using API</span>
             </div>
           </a>
-          <a href="https://wngus6429.github.io/LifeCoding-REDUX/" target="blank" class="project"
+          <a
+            href="https://wngus6429.github.io/LifeCoding-REDUX/"
+            target="blank"
+            class="project"
+            data-type="frontend"
             ><img src="image/project/react2.jpg" alt="Using React, Redux" class="project__img" />
             <div class="project__description">
               <h3>Create Read Update Delete</h3>
               <span>Redux with React</span>
             </div></a
           >
-          <a href="https://github.com/wngus6429/ReactNodeYoutube" target="blank" class="project"
+          <a
+            href="https://github.com/wngus6429/ReactNodeYoutube"
+            target="blank"
+            class="project"
+            data-type="fullstack"
             ><img
               src="image/project/react3.jpg"
               alt="Using React, Redux, node.js, mongoDB"
@@ -184,7 +204,11 @@
               <span>React, Redux, Node.js, MongoDB, <br />　Router, Auth, Router etc</span>
             </div></a
           >
-          <a href="https://github.com/wngus6429/YoutubeMake" target="blank" class="project"
+          <a
+            href="https://github.com/wngus6429/YoutubeMake"
+            target="blank"
+            class="project"
+            data-type="fullstack"
             ><img
               src="image/project/javascript1.jpg"
               alt="Using Javascript, nodejs, mongodb"
@@ -195,7 +219,11 @@
               <span>JavaScript, Pug, Node.js, Scss, MongoDB, Auth, Router etc</span>
             </div></a
           >
-          <a href="https://wngus6429.github.io/JavaScriptMake/" target="blank" class="project"
+          <a
+            href="https://wngus6429.github.io/JavaScriptMake/"
+            target="blank"
+            class="project"
+            data-type="frontend"
             ><img
               src="image/project/javascript2.jpg"
               alt="Using Javascript, Weather Api"
@@ -206,21 +234,33 @@
               <span>JavaScript, Find your location and temperature</span>
             </div></a
           >
-          <a href="https://wngus6429.github.io/kakaoclone2/" target="blank" class="project"
+          <a
+            href="https://wngus6429.github.io/kakaoclone2/"
+            target="blank"
+            class="project"
+            data-type="mobile"
             ><img src="image/project/kakao.jpg" alt="Using React, Redux" class="project__img" />
             <div class="project__description">
               <h3>Kakao Clone, Will be Update</h3>
               <span>Html and Css</span>
             </div></a
           >
-          <a href="https://github.com/wngus6429/ReactNative-Todo" target="blank" class="project"
+          <a
+            href="https://github.com/wngus6429/ReactNative-Todo"
+            target="blank"
+            class="project"
+            data-type="mobile"
             ><img src="image/project/native1.jpg" alt="Using ReactNative" class="project__img" />
             <div class="project__description">
               <h3>React Native Clone coding, Todo List</h3>
               <span>ReactNative, expo, npm</span>
             </div></a
           >
-          <a href="https://github.com/wngus6429/ReactNative-weather" target="blank" class="project"
+          <a
+            href="https://github.com/wngus6429/ReactNative-weather"
+            target="blank"
+            class="project"
+            data-type="mobile"
             ><img src="image/project/native2.jpg" alt="Using ReactNative" class="project__img" />
             <div class="project__description">
               <h3>ReactNative Clone coding, weather</h3>

@@ -62,3 +62,43 @@ function scrollIntoView(seletor) {
   const scrollTo = document.querySelector(seletor);
   scrollTo.scrollIntoView({ behavior: "smooth" });
 }
+
+//Projects
+const workBtnContainer = document.querySelector(".work__categories");
+const projectContainer = document.querySelector(".work__projects");
+const projects = document.querySelectorAll(".project");
+workBtnContainer.addEventListener("click", (e) => {
+  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+  if (filter == null) {
+    return; //아무것도 안한다는거
+  }
+  projectContainer.classList.add("anim-out");
+  setTimeout(() => {
+    projects.forEach((project) => {
+      //console.log(project.dataset.type);
+      // ALl * 이거나 아니면 filter가 project에 있는 dataset값의 type이 똑같으면,
+      // 선택된거랑 똑같으면, 우리가 프로젝트의 클래스에 추가해줄거임
+      if (filter === "*" || filter === project.dataset.type) {
+        project.classList.remove("invisible");
+      } else {
+        project.classList.add("invisible");
+      }
+      //클릭한 필터와 데이터타입이 매칭하면 보여줘야 하니까, 안보여주는 클래스를 뺴고
+      //만약에 타입이 필터랑 동일하지 않으면 안보여줘야 하니까, 안보여줘야 되는 클래스를 등록해준다
+    });
+    projectContainer.classList.remove("anim-out");
+  }, 300);
+  //애니메이션 클래스 추가 되고 함수가 끝나고 0.3초 지난 다음에 위의 코드가 실행되는 거임.
+  //setTimeout은 브라우저 API
+  console.log(filter);
+});
+
+//  이 3가지는 결론적으로 같다.
+//  projects.forEach((project) => {});
+
+//  for (let projects of projects){}
+
+//  let project
+//  for(let i=0; i<projects.length; i++){
+//   project = projects[i];
+//    }
