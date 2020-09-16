@@ -393,7 +393,7 @@ opcaity를 1로 하고 그리고 탑을 원래대로 0으로 한다*/
   transform: translateY(0px);
 }
 .project__description h3 {
-  color: var(--color-dar-white);
+  color: var(--color-orange);
 }
 
 .project__description h3:after {
@@ -499,7 +499,13 @@ opcaity를 1로 하고 그리고 탑을 원래대로 0으로 한다*/
   #navbar {
     flex-direction: column;
     align-items: flex-start;
+    background-color: var(--color-blue);
   }
+
+  #navrbar.navbar--dark {
+    padding: 16px;
+  }
+
   .navbar__menu {
     flex-direction: column;
     text-align: center;
@@ -507,6 +513,10 @@ opcaity를 1로 하고 그리고 탑을 원래대로 0으로 한다*/
     /* 이거 안 해주면 좁아서 왼쪽에 몰려있음 */
     display: none;
   }
+  .navbar__menu.open {
+    display: block;
+  }
+
   .about__majors {
     flex-direction: column;
   }

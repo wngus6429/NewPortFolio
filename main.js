@@ -12,7 +12,6 @@ document.addEventListener("scroll", () => {
 });
 
 // Handle Scrolling when tapping on the navbar menu
-
 const navbarMenu = document.querySelector(".navbar__menu");
 navbarMenu.addEventListener("click", () => {
   //   data-link="#about 이런식으로 달아준거 dataset안에 들어있따.
@@ -23,7 +22,14 @@ navbarMenu.addEventListener("click", () => {
   //console.log(event.target.dataset.link);
   //   const scrollTo = document.querySelector(link);
   //   scrollTo.scrollIntoView({ behavior: "smooth" });
+  navbarMenu.classList.remove(".open");
   scrollIntoView(link);
+});
+
+//Navbar toggle button for smartphone
+const navbartoggle = document.querySelector(".navbar__toggle-btn");
+navbartoggle.addEventListener("click", () => {
+  navbarMenu.classList.toggle("open");
 });
 
 //Handle click on "Contact me" Button on home
