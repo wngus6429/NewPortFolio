@@ -128,13 +128,12 @@ p {
   margin: 0 4px;
   cursor: pointer;
   border-radius: 4px;
-}
-
-.navbar__menu__item.active {
-  border: 1px solid var(--color-dark-pink);
+  border: 1px solid transparent;
+  border-radius: var(--size-border-radius);
 }
 
 .navbar__menu__item:hover {
+  border-color: white;
   background-color: #fa7d8a;
 }
 
@@ -307,7 +306,7 @@ progress {
   padding: 8px 33px;
 }
 
-.category__btn.active,
+.category__btn.selected,
 .category__btn:hover {
   background-color: pink;
   color: var(--color-yellow);
