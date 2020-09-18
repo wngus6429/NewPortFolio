@@ -128,13 +128,12 @@ p {
   margin: 0 4px;
   cursor: pointer;
   border-radius: 4px;
-}
-
-.navbar__menu__item.active {
-  border: 1px solid var(--color-dark-pink);
+  border: 1px solid transparent;
+  border-radius: var(--size-border-radius);
 }
 
 .navbar__menu__item:hover {
+  border-color: white;
   background-color: #fa7d8a;
 }
 
@@ -177,7 +176,7 @@ p {
 
 /* Section common */
 .section {
-  padding: 50px;
+  padding: 30px;
   text-align: center;
   margin: auto;
   /* 이거 안하니 오른쪽에 margin이 있떠라 */
@@ -222,6 +221,7 @@ p {
 
 .major__description {
   font-size: var(--font-small);
+  margin-bottom: 10px;
 }
 
 .job {
@@ -307,7 +307,7 @@ progress {
   padding: 8px 33px;
 }
 
-.category__btn.active,
+.category__btn.selected,
 .category__btn:hover {
   background-color: pink;
   color: var(--color-yellow);
@@ -335,13 +335,20 @@ opcaity를 1로 하고 그리고 탑을 원래대로 0으로 한다*/
   top: -20px;
   left: 4px;
   opacity: 0;
-  position: all var(--animation-duration ease-in-out);
+  position: all var(--animation-duration ease-in);
 }
 
 .work__projects {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  opacity: 1;
+  transition: all var(--animation-duration) ease-out;
+}
+
+.work__projects.anim-out {
+  opacity: 0.6;
+  transform: scale(0.96) translateY(40px);
 }
 
 .project {
@@ -352,6 +359,10 @@ opcaity를 1로 하고 그리고 탑을 원래대로 0으로 한다*/
   width: 350px;
   height: 350px;
   margin: 2px;
+}
+
+.project.invisible {
+  display: none;
 }
 
 #work {
@@ -383,7 +394,7 @@ opcaity를 1로 하고 그리고 탑을 원래대로 0으로 한다*/
   transform: translateY(0px);
 }
 .project__description h3 {
-  color: var(--color-dar-white);
+  color: var(--color-orange);
 }
 
 .project__description h3:after {
@@ -458,6 +469,29 @@ opcaity를 1로 하고 그리고 탑을 원래대로 0으로 한다*/
   color: red;
 }
 
+/* Scroll */
+.arrowup {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 70px;
+  height: 70px;
+  font-size: 50px;
+  color: red;
+  background-color: #82d5db;
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  /* 안보일떄는 pointer-events 를 사용하면 클릭이 안된다 */
+  transition: all 300ms ease-in;
+}
+
+.arrowup.visible {
+  opacity: 1;
+  pointer-events: auto;
+  /* 이거 있어야 눌러야 home으로 올라감. 위에 none 했으니 */
+}
+
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
   .navbar__toggle-btn {
@@ -466,7 +500,13 @@ opcaity를 1로 하고 그리고 탑을 원래대로 0으로 한다*/
   #navbar {
     flex-direction: column;
     align-items: flex-start;
+    background-color: var(--color-blue);
   }
+
+  #navrbar.navbar--dark {
+    padding: 16px;
+  }
+
   .navbar__menu {
     flex-direction: column;
     text-align: center;
@@ -474,6 +514,10 @@ opcaity를 1로 하고 그리고 탑을 원래대로 0으로 한다*/
     /* 이거 안 해주면 좁아서 왼쪽에 몰려있음 */
     display: none;
   }
+  .navbar__menu.open {
+    display: block;
+  }
+
   .about__majors {
     flex-direction: column;
   }
@@ -483,5 +527,11 @@ opcaity를 1로 하고 그리고 탑을 원래대로 0으로 한다*/
   .project {
     flex-grow: 1;
     /* 이건 알아서 화면을 메꿔주는 역할 */
+  }
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 22px;
   }
 }
