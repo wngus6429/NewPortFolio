@@ -8,10 +8,7 @@
     <meta name="description" content="I will become Expert developer" />
     <meta name="author" content="朴主鉉、パクジュヒョン, Park Juhyun, 박주현" />
     <script src="https://kit.fontawesome.com/6e3b45f19c.js" crossorigin="anonymous"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
     <link rel="icon" type="image/png" href="image/favicon1.png" />
     <link rel="stylesheet" href="style.css" />
     <script src="main.js" defer></script>
@@ -40,7 +37,7 @@
         パクジュヒョンと申します。<br />
         I'm will become Expert Developer
       </h1>
-      <h2 class="home__description">知識が多い開発者</h2>
+      <h2 class="home__description">諦めない開発者</h2>
       <button class="home__contact" data-link="#contact">Contact Me</button>
     </section>
     <!-- About -->
@@ -56,8 +53,8 @@
           <div class="major__icon"><i class="fab fa-react"></i><i class="fab fa-js"></i></div>
           <h2 class="major__title">Front End</h2>
           <div class="major__description">
-            React, JavaScript, Redux <br />
-            Next, HTML, CSS, etc
+            React, JavaScript, Hooks, Redux <br />
+            Next, HTML, CSS, SCSS etc
           </div>
         </div>
         <div class="major">
@@ -77,7 +74,7 @@
           <img src="image/tecnos.PNG" alt="TECNOS JAPAN" />
           <div class="job__name">System Engineer</div>
           <div class="job__description">Intra-Mart, ABAP, Sql server, JP1, PowerCenter</div>
-          <div class="job__period">2019.04.01 ~ 現在</div>
+          <div class="job__period">2019.04.01 ~ 2020.12.31</div>
         </div>
       </div>
     </section>
@@ -96,15 +93,13 @@
             <h3 class="skillset__title">Skills <i class="fas fa-journal-whills"></i></h3>
             <div class="skill">
               <div class="skill__description">
-                <span>React, Next</span>
-                <span>Redux</span>
-                <span>JavaScript</span>
-                <span>Node.js</span>
-                <span>Express</span>
-                <span>MySQL</span>
-                <span>HTML</span>
-                <span>CSS</span>
-                <br />
+                <h3>
+                  フロントエンドをやっていきたいと思います。<br />
+                  FrontEnd = JavaScript, React, Hooks, Redux, styled component, Next, etc... <br />(gulp, scss, pug, parcel, webpack
+                  etc....) <br />(CSR)Client Side Rendering, ServerSideRendering, Dynamic Routing <br /><br />BackEnd = Nodejs(Express),
+                  Python, etc ... <br />DataBase = MySql, MongoDB, SqlServer <br /><br />その他 = Vs Code, Git, AWS(ubuntu), Paiza(rank C),
+                  Material Ui, Antd, etc... <br />2021年4月、基本情報技術者試験、合格しました。
+                </h3>
                 <span>ETC....</span>
                 <progress></progress>
               </div>
@@ -114,10 +109,11 @@
             <div class="tools">
               <h3 class="skillset__title">Tools <i class="fas fa-tools"></i></h3>
               <ul class="tools__list">
+                <li><span>React Devtool</span></li>
+                <li><span>Redux Devtool</span></li>
                 <li><span>AWS Ubuntu</span></li>
                 <li><span>Visual Stuido Code</span></li>
                 <li><span>MySQL Workbench</span></li>
-                <li><span>MongoDb Compass Community </span></li>
               </ul>
             </div>
             <div class="etc">
@@ -138,18 +134,10 @@
       <div class="section__container">
         <h1>My Project</h1>
         <div class="work__categories">
-          <button class="category__btn selected" data-filter="*">
-            All <span class="category__count">8</span>
-          </button>
-          <button class="category__btn" data-filter="frontend">
-            FrontEnd <span class="category__count">3</span>
-          </button>
-          <button class="category__btn" data-filter="fullstack">
-            FullStack <span class="category__count">3</span>
-          </button>
-          <button class="category__btn" data-filter="mobile">
-            Mobile <span class="category__count">2</span>
-          </button>
+          <button class="category__btn selected" data-filter="*">All <span class="category__count">8</span></button>
+          <button class="category__btn" data-filter="frontend">FrontEnd <span class="category__count">3</span></button>
+          <button class="category__btn" data-filter="fullstack">FullStack <span class="category__count">3</span></button>
+          <button class="category__btn" data-filter="mobile">Mobile <span class="category__count">2</span></button>
         </div>
         <div class="work__projects">
           <a href="https://github.com/wngus6429?tab=repositories" target="blank" class="project"
@@ -160,21 +148,13 @@
             </div>
           </a>
           <a href="https://wngus6429.github.io/parkflix" target="blank" class="project" data-type="frontend"
-            ><img
-              src="image/project/react1.jpg"
-              alt="Using React, JSX, Styled Component, Router Etc"
-              class="project__img"
-            />
+            ><img src="image/project/react1.jpg" alt="Using React, JSX, Styled Component, Router Etc" class="project__img" />
             <div class="project__description">
               <h3>Movie TV Search Site</h3>
               <span>React And Using API</span>
             </div>
           </a>
-          <a
-            href="https://wngus6429.github.io/LifeCoding-REDUX/"
-            target="blank"
-            class="project"
-            data-type="frontend"
+          <a href="https://wngus6429.github.io/LifeCoding-REDUX/" target="blank" class="project" data-type="frontend"
             ><img src="image/project/react2.jpg" alt="Using React, Redux" class="project__img" />
             <div class="project__description">
               <h3>Create Read Update Delete</h3>
@@ -182,11 +162,7 @@
             </div></a
           >
           <a href="http://parkbird.site/" target="blank" class="project" data-type="fullstack"
-            ><img
-              src="image/project/port.jpg"
-              alt="Using React, Next, Redux, Node.js, MySQL"
-              class="project__img"
-            />
+            ><img src="image/project/port.jpg" alt="Using React, Next, Redux, Node.js, MySQL" class="project__img" />
             <div class="project__description">
               <h3>ParkSite SNS(Twitter)</h3>
               <span>React, Next, Redux, Node.js, MySql, <br />　AWS UBUNTU etc</span>
@@ -195,67 +171,40 @@
               <span>その場合、モバイルはまだ未完成ですが、モバイルで確認お願いします。</span>
             </div></a
           >
-          <a
-            href="https://github.com/wngus6429/ReactNodeYoutube"
-            target="blank"
-            class="project"
-            data-type="fullstack"
-            ><img
-              src="image/project/react3.jpg"
-              alt="Using React, Redux, node.js, mongoDB"
-              class="project__img"
-            />
+          <a href="https://github.com/wngus6429/ReactNodeYoutube" target="blank" class="project" data-type="fullstack"
+            ><img src="image/project/react3.jpg" alt="Using React, Redux, node.js, mongoDB" class="project__img" />
             <div class="project__description">
               <h3>React Youtube</h3>
               <span>React, Redux, Node.js, MongoDB, <br />　Router, Auth, Router etc</span>
             </div></a
           >
-          <a
-            href="https://github.com/wngus6429/YoutubeMake"
-            target="blank"
-            class="project"
-            data-type="fullstack"
-            ><img
-              src="image/project/javascript1.jpg"
-              alt="Using Javascript, nodejs, mongodb"
-              class="project__img"
-            />
+          <a href="https://github.com/wngus6429/YoutubeMake" target="blank" class="project" data-type="fullstack"
+            ><img src="image/project/javascript1.jpg" alt="Using Javascript, nodejs, mongodb" class="project__img" />
             <div class="project__description">
               <h3>JavaScript Youtube</h3>
-              <span>JavaScript, Pug, Node.js, Scss, MongoDB, Auth, Router etc</span>
+              <span>動画のアップロード再生、録画、プロフィール修正、Flexbox, Gridを使ったレイアウト</span>
+              <br />
+              <span
+                >JavaScript, Pug, Node.js, Scss, MongoDB,<br />
+                Auth, Router etc</span
+              >
             </div></a
           >
-          <a
-            href="https://wngus6429.github.io/JavaScriptMake/"
-            target="blank"
-            class="project"
-            data-type="frontend"
-            ><img
-              src="image/project/javascript2.jpg"
-              alt="Using Javascript, Weather Api"
-              class="project__img"
-            />
+          <a href="https://wngus6429.github.io/JavaScriptMake/" target="blank" class="project" data-type="frontend"
+            ><img src="image/project/javascript2.jpg" alt="Using Javascript, Weather Api" class="project__img" />
             <div class="project__description">
               <h3>JavaScript ToDolist, location, temp</h3>
               <span>JavaScript, Find your location and temperature</span>
             </div></a
           >
-          <a
-            href="https://github.com/wngus6429/ReactNative-Todo"
-            target="blank"
-            class="project"
-            data-type="mobile"
+          <a href="https://github.com/wngus6429/ReactNative-Todo" target="blank" class="project" data-type="mobile"
             ><img src="image/project/native1.jpg" alt="Using ReactNative" class="project__img" />
             <div class="project__description">
               <h3>React Native Clone coding, Todo List</h3>
               <span>ReactNative, expo, npm</span>
             </div></a
           >
-          <a
-            href="https://github.com/wngus6429/ReactNative-weather"
-            target="blank"
-            class="project"
-            data-type="mobile"
+          <a href="https://github.com/wngus6429/ReactNative-weather" target="blank" class="project" data-type="mobile"
             ><img src="image/project/native2.jpg" alt="Using ReactNative" class="project__img" />
             <div class="project__description">
               <h3>ReactNative Clone coding, weather</h3>
@@ -278,7 +227,8 @@
               Udemy, <br />
               Youtube, <br />
               blog, <br />
-              subscription
+              subscription<br />
+              inflearn
             </p>
           </div>
         </div>
