@@ -39,7 +39,7 @@
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif Verdana, sans-serif;
   margin: 0px;
   cursor: default;
   /* 텍스트에 마우스 올리면 바뀌니까 */
@@ -148,7 +148,7 @@ p {
 
 /* Home */
 #home {
-  background: url("image/sky.png") center/cover no-repeat;
+  background: url('image/sky.png') center/cover no-repeat;
   padding: 40px;
   text-align: center;
 }
@@ -283,6 +283,7 @@ p {
   align-items: center;
   justify-items: center;
   font-size: 22px;
+  line-height: 30px;
 }
 
 .tools,
@@ -366,7 +367,7 @@ opcaity를 1로 하고 그리고 탑을 원래대로 0으로 한다*/
 }
 
 #work {
-  background: url("image/project/back.jpg") center/cover;
+  background: url('image/project/back.jpg') center/cover;
 }
 
 .project__img {
@@ -398,7 +399,7 @@ opcaity를 1로 하고 그리고 탑을 원래대로 0으로 한다*/
 }
 
 .project__description h3:after {
-  content: "";
+  content: '';
   display: block;
   position: relative;
   left: 50%;
