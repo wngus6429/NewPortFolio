@@ -1,303 +1,222 @@
 <!-- @format -->
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="I will become Expert developer" />
-    <meta name="author" content="朴主鉉、パクジュヒョン, Park Juhyun, 박주현" />
-    <script src="https://kit.fontawesome.com/6e3b45f19c.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+    <meta name="description" content="풀스택 개발자 박주현의 포트폴리오입니다." />
+    <meta name="author" content="박주현" />
+    <title>박주현 | 풀스택 개발자 포트폴리오</title>
     <link rel="icon" type="image/png" href="image/favicon1.png" />
+    <script src="https://kit.fontawesome.com/6e3b45f19c.js" crossorigin="anonymous"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <script src="main.js" defer></script>
-    <title>Park Portfolio</title>
   </head>
   <body>
-    <!-- NavBar -->
-    <nav id="navbar">
-      <div class="navbar__logo"><i class="fas fa-jedi"></i> <a href="#">Park Juhyun</a></div>
-      <ul class="navbar__menu">
-        <li class="navbar__menu__item active" data-link="#home">Home</li>
-        <li class="navbar__menu__item" data-link="#about">About</li>
-        <li class="navbar__menu__item" data-link="#skills">Skills</li>
-        <li class="navbar__menu__item" data-link="#work">My work</li>
-        <li class="navbar__menu__item" data-link="#studyplan">Study Plan</li>
-        <li class="navbar__menu__item" data-link="#contact">Contact</li>
-      </ul>
-      <!-- Toggle button -->
-      <button class="navbar__toggle-btn"><i class="fas fa-bars"></i></button>
-    </nav>
-    <!-- Home -->
-    <section id="home">
-      <img src="image/profile.jpg" alt="Park's photo" class="home__avatar" height="150px" />
-      <h2 class="home__title">
-        はじめまして, <br />
-        <h1>About Me</h1>
-        <p>
-          2019/04 ~ 2020/12 = ERP会社。<br />
-          2021/09 ~ 現在 = SI会社
-          <br />
-        </p>
-      </h2>
-      <h2 class="home__description">諦めない開発者</h2>
-      <button class="home__contact" data-link="#contact">Contact Me</button>
-    </section>
-    <!-- About -->
-    <section id="about" class="section section__container">
-      <div class="about__majors">
-        <div class="major">
-          <div class="major__icon"><i class="fab fa-react"></i><i class="fab fa-js"></i></div>
-          <h2 class="major__title">Front End</h2>
-          <div class="major__description">
-            JavaScript(実務), Vue,Nuxt(実務) <br />
-            独学(React, Next) etc <br />
+    <!-- Header -->
+    <header id="header">
+      <div class="header__logo">
+        <i class="fas fa-jedi"></i>
+        <a href="#">Juhyun Park</a>
+      </div>
+      <nav class="header__nav">
+        <ul class="header__menu">
+          <li><a class="header__menu__item active" href="#home">Home</a></li>
+          <li><a class="header__menu__item" href="#about">About</a></li>
+          <li><a class="header__menu__item" href="#skills">Skills</a></li>
+          <li><a class="header__menu__item" href="#work">Projects</a></li>
+          <li><a class="header__menu__item" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="header__toggle" aria-label="navigation menu toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+    </header>
+
+    <main>
+      <!-- Home -->
+      <section id="home">
+        <div class="home__container">
+          <img src="image/profile.jpg" alt="박주현 프로필 사진" class="home__avatar" />
+          <h1 class="home__title">안녕하세요, <br />풀스택 개발자 박주현입니다.</h1>
+          <p class="home__description">React, Next.js, Nest.js, TypeORM, MySQL, AWS에 강점이 있습니다.</p>
+          <a class="home__contact" href="#contact">Contact Me</a>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="section">
+        <div class="section__container">
+          <h2>About Me</h2>
+          <p>
+            SI 회사에서 다양한 프로젝트를 경험하며 웹 개발의 기본기를 다졌고, 현재는 풀스택 개발자로서 역량을 키우고 있습니다.
+            <br />
+            새로운 기술을 배우고 적용하는 것을 즐기며, 동료들과의 협업을 통해 시너지를 내는 것을 중요하게 생각합니다.
+          </p>
+          <div class="about__majors">
+            <div class="major">
+              <div class="major__icon"><i class="fab fa-react"></i></div>
+              <h3 class="major__title">Frontend</h3>
+              <p>React, Next.js, Vue.js, Nuxt.js, JavaScript, TypeScript</p>
+            </div>
+            <div class="major">
+              <div class="major__icon"><i class="fab fa-node-js"></i></div>
+              <h3 class="major__title">Backend</h3>
+              <p>Nest.js, Node.js, Express, Python, Flask, GraphQL</p>
+            </div>
+            <div class="major">
+              <div class="major__icon"><i class="fas fa-database"></i></div>
+              <h3 class="major__title">Database</h3>
+              <p>MySQL, TypeORM, DynamoDB, SQL Server, MongoDB</p>
+            </div>
+            <div class="major">
+              <div class="major__icon"><i class="fab fa-aws"></i></div>
+              <h3 class="major__title">DevOps</h3>
+              <p>AWS, Ubuntu, Git</p>
+            </div>
           </div>
-        </div>
-        <div class="major">
-          <div class="major__icon"><i class="fab fa-node"></i><i class="fab fa-python"></i></div>
-          <h2 class="major__title">Back End</h2>
-          <div class="major__description">Node.js, Python(Flask)</div>
-        </div>
-        <div class="major">
-          <div class="major__icon"><i class="fas fa-database"></i></div>
-          <h2 class="major__title">Server</h2>
-          <div class="major__description">DynamoDB(AWS)(実務)<br />Sql Server(実務), MySQL, MongoDB</div>
-        </div>
-      </div>
-      <div style="text-align: left; width: 1000px">
-        【IntraMart】(2019.08 ~ 2020.08) <br />
-        ・JavaScript, SQL server ・運用、保守、開発、テスト<br />
-        ・お客様から、開発、修正の案件を受けて、開発と修正<br />
-        ・画面修正、ワークフロー開発、修正、DBと連結 <br />
-        ・お客様から、DB開発、内容編集,入力対応 <br />
-        ・お客様のデータの最新化 ・修正後、詳細設計の変更および単体テスト, 結合<br />
-        ・新ワークフローを追加、元のワークフロー設定修正をしてお客様の仕事がもっと効率よくできるようにしました。 <br />
-        <br />
-        【JP1,PowerCenter】(2019.08 ~ 2020.04) ・運用、保守、開発、テスト <br />
-        ・プログラムデータの受け渡し、型の変換<br />
-        ・IntraMartとSAPのデータ受け渡し、仕分け設定 <br />
-        ・プログラム実行時間, 追加、修正 <br />
-        ・お客様から、開発、修正の案件を受けて、開発と修正<br />
-        ・修正後、詳細設計の変更および単体テスト, 結合<br />
-        ・JP1とPowerCenterの新しい開発をして、INTRAMARTとSAPのプログラムを繋ぐことをしていました。 <br />
-        <br />
-        【SAP ABAP (FI)】(2020.04 ~ 2020.12)<br />
-        ・運用、保守、開発、テスト <br />
-        ・お客様から、開発、修正の案件を受けて、開発と修正 <br />
-        ・開発、修正後、詳細設計の変更および単体テスト<br />
-        <br />
-        【プロジェクト管理】 Redmine, Gmail, Notes <br />
-        <br />
-        【JavaScript(Vue, Nuxt)】ウォーターフォール(2021.09 ~ 2022.05)<br />
-        (評価システム, E-learningシステム)<br />
-        ・フロントエンド開発、テスト<br />
-        ・評価システム、E-learningシステム<br />
-        ・SPA開発(Vue, Nuxt)<br />
-        ・DBデータAPI連携(DynamoDB, GraphQL) <br />
-        ・条件データ分岐/Propsデータの画面表示制御 <br />
-        ・Excelデータ連携 <br />
-        ・レスポンシブ対応(PC, スマホ) <br />
-        ・チケット管理(Redmine)<br />
-        ・ソース管理(Git, backlog, SourceTree, VScode, Slack) <br />
-        <br />
-        【JavaScript(Vue,Nuxt)】(2022.05 ~ 2022.06) <br />
-        ・証券会社システムリニューアル<br />
-        ・申請画面をJavaScript, html, cssからVue, Nuxtを使ったシステムに変更 <br />
-        ・保守、テスト、スマホ動作確認テストなど <br />
-        <br />
-        【Java(DOMA)】ウォーターフォール(2022.06 ~ 2022.08)( <br />
-        ・Java, 介護システム、介護制度改正よる保守作業<br />
-        ・詳細設計、ソース修正、データ作成、テストなど<br />
-        <br />
-        【JavaScript, Vue, Git, SVN】(2022.09 ~ 2022.11)（照会・依頼システム）<br />
-        ・Vueの画面変更、ロジック変更・追加 など<br />
-        ・モーダル画面追加<br />
-        ・障害対応<br />
-        <br />
-        【WordPress修正、最新化】(2022.12 ~ 現在)（会社ホームページ修正）
-      </div>
-    </section>
-    <!-- Skills -->
-    <section id="skills" class="section">
-      <div class="section__container">
-        <h1>Skills</h1>
-        <h2>Skills & Attributes</h2>
-        <div class="skillset">
-          <div class="skillset__left">
-            <h3 class="skillset__title">Skills <i class="fas fa-journal-whills"></i></h3>
-            <div class="skill">
-              <div class="skill__description">
-                <h3>
-                  FrontEnd = JavaScript(実務), Vue(実務), Nuxt(実務), React(Next) <br />
-                  BackEnd = Nodejs(Express), Python(Flask), GraphQl(実務)<br />
-                  DataBase = Amazon DynamoDB(実務), MySql<br />
-                  その他 = Git(実務), AWS(ubuntu)(実務), Element UI (実務), Slack(実務), AWS DynamoDB(実務)
-                  <br />資格証:基本情報技術者, TOEIC745, Excel, Powerpoint
-                </h3>
-                <h2>SAP, ABAP, IntraMart, JP1, PowerCenter, SQL</h2>
-                <span>ETC....</span>
-                <progress></progress>
+          <div class="about__jobs">
+            <div class="job">
+              <img src="image/project/profile.png" alt="SI 회사 로고" />
+              <div>
+                <p class="job__name">SI 회사</p>
+                <p class="job__period">2021.09 - 현재</p>
+              </div>
+            </div>
+            <div class="job">
+              <img src="image/project/profile.png" alt="ERP 회사 로고" />
+              <div>
+                <p class="job__name">ERP 회사</p>
+                <p class="job__period">2019.04 - 2020.12</p>
               </div>
             </div>
           </div>
-          <div class="skillset__right">
-            <div class="tools">
-              <h3 class="skillset__title">Tools <i class="fas fa-tools"></i></h3>
-              <ul class="tools__list">
-                <li><span>SourceTree</span></li>
-                <li><span>Visual Stuido Code</span></li>
-                <li><span>React Devtool</span></li>
-                <li><span>Redux Devtool</span></li>
-                <li><span>AWS Ubuntu</span></li>
-                <li><span>MySQL Workbench</span></li>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="section">
+        <div class="section__container">
+          <h2>Skills</h2>
+          <p>제가 보유한 기술 스택입니다.</p>
+          <div class="skills__container">
+            <div class="skill-set">
+              <h3>Frontend</h3>
+              <ul>
+                <li>React, Next.js</li>
+                <li>Vue.js, Nuxt.js</li>
+                <li>JavaScript, TypeScript</li>
+                <li>HTML, CSS, SCSS</li>
               </ul>
             </div>
-            <div class="etc">
-              <h3 class="skillset__title">Etc <i class="fas fa-school"></i></h3>
-              <ul class="etc__list">
-                <li><span>Git</span></li>
-                <li><span>Slack</span></li>
-                <li><span>Backlog</span></li>
+            <div class="skill-set">
+              <h3>Backend</h3>
+              <ul>
+                <li>Nest.js, Node.js, Express</li>
+                <li>Python, Flask</li>
+                <li>GraphQL</li>
+              </ul>
+            </div>
+            <div class="skill-set">
+              <h3>Database</h3>
+              <ul>
+                <li>MySQL, TypeORM</li>
+                <li>DynamoDB, SQL Server</li>
+                <li>MongoDB</li>
+              </ul>
+            </div>
+            <div class="skill-set">
+              <h3>DevOps & Tools</h3>
+              <ul>
+                <li>AWS, Ubuntu</li>
+                <li>Git, Sourcetree</li>
+                <li>Visual Studio Code</li>
+                <li>Slack, Redmine</li>
               </ul>
             </div>
           </div>
         </div>
-      </div>
-      <img src="image/study2.jpg" class="project__img" />
-      <img src="image/ones2.jpg" class="project__img" />
-      <img src="image/ones.jpg" class="project__img" />
-    </section>
-    <!-- Work -->
-    <section id="work" class="section">
-      <div class="section__container">
-        <h1>My Project</h1>
-        <div class="work__categories">
-          <button class="category__btn selected" data-filter="*">All <span class="category__count">9</span></button>
-          <button class="category__btn" data-filter="frontend">FrontEnd <span class="category__count">4</span></button>
-          <button class="category__btn" data-filter="fullstack">FullStack <span class="category__count">3</span></button>
-          <button class="category__btn" data-filter="mobile">Mobile <span class="category__count">2</span></button>
-        </div>
-        <div class="work__projects">
-          <a href="https://github.com/wngus6429?tab=repositories" target="blank" class="project"
-            ><img src="image/project/git.png" alt="My GitHub" class="project__img" />
-            <div class="project__description">
-              <h3>My GitHub</h3>
-              <span>I will Study Forever</span>
-            </div>
-          </a>
-          <a href="https://wngus6429.github.io/parkflix" target="blank" class="project" data-type="frontend"
-            ><img src="image/project/react1.jpg" alt="Using React, JSX, Styled Component, Router Etc" class="project__img" />
-            <div class="project__description">
-              <h3>Movie TV Search Site</h3>
-              <span>React And Using API</span>
-            </div>
-          </a>
-          <a href="https://wngus6429.github.io/LifeCoding-REDUX/" target="blank" class="project" data-type="frontend"
-            ><img src="image/project/react2.jpg" alt="Using React, Redux" class="project__img" />
-            <div class="project__description">
-              <h3>Create Read Update Delete</h3>
-              <span>Redux with React</span>
-            </div></a
-          >
-          <a href="http://parkbird.site/" target="blank" class="project" data-type="fullstack"
-            ><img src="image/project/sns.png" alt="Using React, Next, Redux, Node.js, MySQL" class="project__img" />
-            <div class="project__description">
-              <h3>ParkSite SNS(Twitter)</h3>
-              <span>React, Next, Redux, Node.js, MySql, <br />　AWS UBUNTU etc</span>
-              <span>AWS インスタンス停止する時もあります。</span>
-              <span>Http設定なので、PCによって接続できない場合があります。</span>
-              <span>その場合、モバイルはまだ未完成ですが、モバイルで確認お願いします。</span>
-            </div></a
-          >
-          <a href="https://github.com/wngus6429/devblog" target="blank" class="project" data-type="frontend"
-            ><img src="image/project/blog.png" alt="Using React, Next, Redux, Node.js, MySQL" class="project__img" />
-            <div class="project__description">
-              <h3>開発ブログ</h3>
-              <span>(React, Next, Redux, Node.js, MySql) <br />　個人サーバを使う予定です。</span>
-              <span>自分が今まで勉強してきた内容を上げて共有する目的です。</span>
-            </div></a
-          >
-          <a href="https://github.com/wngus6429/ReactNodeYoutube" target="blank" class="project" data-type="fullstack"
-            ><img src="image/project/react3.jpg" alt="Using React, Redux, node.js, mongoDB" class="project__img" />
-            <div class="project__description">
-              <h3>React Youtube、AWSに上げていない状態です。</h3>
-              <span>React, Redux, Node.js, MongoDB, <br />　Router, Auth, Router etc</span>
-            </div></a
-          >
-          <a href="https://github.com/wngus6429/YoutubeMake" target="blank" class="project" data-type="fullstack"
-            ><img src="image/project/javascript1.jpg" alt="Using Javascript, nodejs, mongodb" class="project__img" />
-            <div class="project__description">
-              <h3>JavaScript Youtube、AWSに上げていない状態です、</h3>
-              <span>動画のアップロード再生、録画、プロフィール修正、Flexbox, Gridを使ったレイアウト</span>
-              <br />
-              <span
-                >JavaScript, Pug, Node.js, Scss, MongoDB,<br />
-                Auth, Router etc</span
-              >
-            </div></a
-          >
-          <a href="https://wngus6429.github.io/JavaScriptMake/" target="blank" class="project" data-type="frontend"
-            ><img src="image/project/javascript2.jpg" alt="Using Javascript, Weather Api" class="project__img" />
-            <div class="project__description">
-              <h3>JavaScript ToDolist, location, temp</h3>
-              <span>JavaScript, Find your location and temperature</span>
-            </div></a
-          >
-          <a href="https://github.com/wngus6429/ReactNative-Todo" target="blank" class="project" data-type="mobile"
-            ><img src="image/project/native1.jpg" alt="Using ReactNative" class="project__img" />
-            <div class="project__description">
-              <h3>React Native Clone coding, Todo List</h3>
-              <span>ReactNative, expo, npm</span>
-            </div></a
-          >
-          <a href="https://github.com/wngus6429/ReactNative-weather" target="blank" class="project" data-type="mobile"
-            ><img src="image/project/native2.jpg" alt="Using ReactNative" class="project__img" />
-            <div class="project__description">
-              <h3>ReactNative Clone coding, weather</h3>
-              <span>ReactNative, expo, npm, using openweathermap</span>
-            </div></a
-          >
-        </div>
-      </div>
-    </section>
-    <section id="studyplan" class="section">
-      <h1>Study Plan(basic)</h1>
-      <h3>FrontEnd 2020 RoadMap</h3>
-      <div class="testimonials">
-        <div class="testimonial">
-          <a href="https://github.com/kamranahmedse/developer-roadmap" target="blank">
-            <img src="image/study/frontend.png" alt="" class="roadmap__picture" />
-          </a>
-          <div class="roadmap__talk">
-            <p>
-              Udemy, <br />
-              Youtube, <br />
-              blog, <br />
-              subscription<br />
-              inflearn
-            </p>
+      </section>
+
+      <!-- Work -->
+      <section id="work" class="section">
+        <div class="section__container">
+          <h2>My Projects</h2>
+          <p>지금까지 진행했던 프로젝트들입니다.</p>
+          <div class="work__categories">
+            <button class="category__btn active" data-filter="*">All <span class="category__count">5</span></button>
+            <button class="category__btn" data-filter="fullstack">Full-stack <span class="category__count">2</span></button>
+            <button class="category__btn" data-filter="frontend">Frontend <span class="category__count">2</span></button>
+            <button class="category__btn" data-filter="mobile">Mobile <span class="category__count">1</span></button>
+          </div>
+          <div class="work__projects">
+            <a href="http://parkbird.site/" target="_blank" class="project" data-type="fullstack">
+              <img src="image/project/sns.png" alt="ParkBird SNS" class="project__img" />
+              <div class="project__description">
+                <h3>ParkBird SNS (Twitter Clone)</h3>
+                <p>React, Next.js, Redux, Node.js, MySQL, AWS</p>
+              </div>
+            </a>
+            <a href="https://github.com/wngus6429/devblog" target="_blank" class="project" data-type="fullstack">
+              <img src="image/project/blog.png" alt="개발 블로그" class="project__img" />
+              <div class="project__description">
+                <h3>개발 블로그</h3>
+                <p>React, Next.js, Node.js, MySQL</p>
+              </div>
+            </a>
+            <a href="https://wngus6429.github.io/parkflix" target="_blank" class="project" data-type="frontend">
+              <img src="image/project/react1.jpg" alt="Parkflix" class="project__img" />
+              <div class="project__description">
+                <h3>Parkflix (Movie Search)</h3>
+                <p>React, Styled Components, Movie API</p>
+              </div>
+            </a>
+            <a href="https://wngus6429.github.io/JavaScriptMake/" target="_blank" class="project" data-type="frontend">
+              <img src="image/project/javascript2.jpg" alt="Momentum" class="project__img" />
+              <div class="project__description">
+                <h3>Momentum (To-do & Weather)</h3>
+                <p>JavaScript, Weather API</p>
+              </div>
+            </a>
+            <a href="https://github.com/wngus6429/ReactNative-Todo" target="_blank" class="project" data-type="mobile">
+              <img src="image/project/native1.jpg" alt="React Native Todo App" class="project__img" />
+              <div class="project__description">
+                <h3>Todo App</h3>
+                <p>React Native, Expo</p>
+              </div>
+            </a>
           </div>
         </div>
-      </div>
-    </section>
-    <section id="contact" class="section">
-      <h1 class="contact__title">Let's talk</h1>
-      <h2 class="contact__email">wngus6429@gmail.com</h2>
-      <h2 class="contact__email">080-8051-8812</h2>
-      <div class="contact__links">
-        <a href="https://github.com/wngus6429?tab=repositories" target="blank" class="contact__icon"
-          ><i class="fab fa-github-square"></i
-        ></a>
-      </div>
-    </section>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="section">
+        <div class="section__container">
+          <h2>Contact Me</h2>
+          <p>아래 이메일 또는 깃허브로 연락주세요.</p>
+          <p class="contact__email">wngus6429@gmail.com</p>
+          <div class="contact__links">
+            <a href="https://github.com/wngus6429" target="_blank" title="깃허브 프로필">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <p>&copy; 2024 Juhyun Park. All rights reserved.</p>
+    </footer>
 
     <!-- Arrow up -->
-    <button class="arrowup">
+    <button class="arrow-up" aria-label="move to top">
       <i class="fas fa-arrow-up"></i>
     </button>
   </body>
 </html>
-
-<!-- font-family: 'Open Sans', sans-serif; -->
