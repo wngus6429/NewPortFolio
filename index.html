@@ -5,217 +5,310 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="풀스택 개발자 박주현의 포트폴리오입니다." />
+    <meta
+      name="description"
+      content="프론트엔드와 풀스택 개발 경험을 갖춘 박주현의 포트폴리오입니다."
+    />
     <meta name="author" content="박주현" />
-    <title>박주현 | 풀스택 개발자 포트폴리오</title>
+    <title>박주현 | Full-stack Developer</title>
     <link rel="icon" type="image/png" href="image/favicon1.png" />
     <script src="https://kit.fontawesome.com/6e3b45f19c.js" crossorigin="anonymous"></script>
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Poppins:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
     <script src="main.js" defer></script>
   </head>
   <body>
-    <!-- Header -->
     <header id="header">
-      <div class="header__logo">
-        <i class="fas fa-jedi"></i>
-        <a href="#">Juhyun Park</a>
-      </div>
-      <nav class="header__nav">
+      <a class="header__logo" href="#home" aria-label="홈으로 이동">
+        <span class="header__mark">JP</span>
+        <span>Juhyun Park</span>
+      </a>
+      <nav class="header__nav" aria-label="주요 메뉴">
         <ul class="header__menu">
           <li><a class="header__menu__item active" href="#home">Home</a></li>
           <li><a class="header__menu__item" href="#about">About</a></li>
           <li><a class="header__menu__item" href="#skills">Skills</a></li>
+          <li><a class="header__menu__item" href="#experience">Experience</a></li>
           <li><a class="header__menu__item" href="#work">Projects</a></li>
           <li><a class="header__menu__item" href="#contact">Contact</a></li>
         </ul>
       </nav>
-      <button class="header__toggle" aria-label="navigation menu toggle">
+      <button class="header__toggle" type="button" aria-label="메뉴 열기" aria-expanded="false">
         <i class="fas fa-bars"></i>
       </button>
     </header>
 
     <main>
-      <!-- Home -->
-      <section id="home">
-        <div class="home__container">
-          <img src="image/profile.jpg" alt="박주현 프로필 사진" class="home__avatar" />
-          <h1 class="home__title">안녕하세요, <br />풀스택 개발자 박주현입니다.</h1>
-          <p class="home__description">React, Next.js, Nest.js, TypeORM, MySQL, AWS에 강점이 있습니다.</p>
-          <a class="home__contact" href="#contact">Contact Me</a>
+      <section id="home" class="hero">
+        <div class="hero__media" aria-hidden="true"></div>
+        <div class="hero__container">
+          <div class="hero__content">
+            <p class="eyebrow">Full-stack Developer · Osaka</p>
+            <h1>React와 TypeScript로 비즈니스 화면을 빠르게 안정화하는 개발자 박주현입니다.</h1>
+            <p class="hero__description">
+              2019년부터 ERP, 금융, 교육, 물류, 보험, AI 채팅 시스템까지 다양한 업무 도메인에서 화면 개발,
+              API 연동, 테스트, PR 리뷰 대응, 운영 개선을 경험했습니다.
+            </p>
+            <div class="hero__actions">
+              <a class="button button--primary" href="#experience">경력 보기</a>
+              <a class="button button--ghost" href="#contact">연락하기</a>
+            </div>
+          </div>
+          <aside class="hero__profile" aria-label="프로필 요약">
+            <img src="image/profile.jpg" alt="박주현 프로필 사진" class="hero__avatar" />
+            <div>
+              <strong>Frontend-focused Full-stack</strong>
+              <span>React · Next.js · Node.js · AWS</span>
+            </div>
+          </aside>
         </div>
       </section>
 
-      <!-- About -->
-      <section id="about" class="section">
+      <section id="about" class="section section--light">
         <div class="section__container">
-          <h2>About Me</h2>
-          <p>
-            SI 회사에서 다양한 프로젝트를 경험하며 웹 개발의 기본기를 다졌고, 현재는 풀스택 개발자로서 역량을 키우고 있습니다.
-            <br />
-            새로운 기술을 배우고 적용하는 것을 즐기며, 동료들과의 협업을 통해 시너지를 내는 것을 중요하게 생각합니다.
-          </p>
-          <div class="about__majors">
-            <div class="major">
-              <div class="major__icon"><i class="fab fa-react"></i></div>
-              <h3 class="major__title">Frontend</h3>
-              <p>React, Next.js, Vue.js, Nuxt.js, JavaScript, TypeScript</p>
+          <div class="section__heading">
+            <p class="eyebrow">About</p>
+            <h2>꾸준한 학습과 실무 개선을 함께 가져가는 개발자</h2>
+          </div>
+          <div class="about__grid">
+            <div class="about__story">
+              <p>
+                프론트엔드 개발에 강점을 두고 React, Next.js, Vue/Nuxt 기반의 SPA와 업무 시스템 화면을
+                구축해왔습니다. 최근에는 Node.js, Python, AWS, Docker를 함께 다루며 풀스택 역량을 확장하고
+                있습니다.
+              </p>
+              <p>
+                학습한 내용은 GitHub와 OneNote에 기록하고, 실제 업무에서는 화면 수정, 버그 대응, 테스트,
+                코드 리뷰 반영, 공통 컴포넌트화처럼 서비스 품질에 직접 연결되는 작업을 꾸준히 수행했습니다.
+              </p>
             </div>
-            <div class="major">
-              <div class="major__icon"><i class="fab fa-node-js"></i></div>
-              <h3 class="major__title">Backend</h3>
-              <p>Nest.js, Node.js, Express, Python, Flask, GraphQL</p>
-            </div>
-            <div class="major">
-              <div class="major__icon"><i class="fas fa-database"></i></div>
-              <h3 class="major__title">Database</h3>
-              <p>MySQL, TypeORM, DynamoDB, SQL Server, MongoDB</p>
-            </div>
-            <div class="major">
-              <div class="major__icon"><i class="fab fa-aws"></i></div>
-              <h3 class="major__title">DevOps</h3>
-              <p>AWS, Ubuntu, Git</p>
+            <div class="about__stats">
+              <div>
+                <strong>7+년</strong>
+                <span>개발 및 운영 경험</span>
+              </div>
+              <div>
+                <strong>10+</strong>
+                <span>참여 프로젝트</span>
+              </div>
+              <div>
+                <strong>N1</strong>
+                <span>일본어 커뮤니케이션</span>
+              </div>
+              <div>
+                <strong>AWS SAA</strong>
+                <span>클라우드 자격</span>
+              </div>
             </div>
           </div>
-          <div class="about__jobs">
-            <div class="job">
-              <img src="image/project/profile.png" alt="SI 회사 로고" />
-              <div>
-                <p class="job__name">SI 회사</p>
-                <p class="job__period">2021.09 - 현재</p>
-              </div>
-            </div>
-            <div class="job">
-              <img src="image/project/profile.png" alt="ERP 회사 로고" />
-              <div>
-                <p class="job__name">ERP 회사</p>
-                <p class="job__period">2019.04 - 2020.12</p>
-              </div>
-            </div>
+          <div class="credentials">
+            <article>
+              <i class="fas fa-certificate"></i>
+              <h3>자격</h3>
+              <p>정보처리기사급 기본정보기술자, AWS SAA, Excel Expert, PowerPoint</p>
+            </article>
+            <article>
+              <i class="fas fa-language"></i>
+              <h3>언어</h3>
+              <p>일본어 JLPT N1, TOEIC 745 기반의 문서/회의 커뮤니케이션</p>
+            </article>
+            <article>
+              <i class="fas fa-users"></i>
+              <h3>협업</h3>
+              <p>GitHub, GitLab, Backlog, Redmine, Slack, Teams, Google Chat</p>
+            </article>
           </div>
         </div>
       </section>
 
-      <!-- Skills -->
       <section id="skills" class="section">
         <div class="section__container">
-          <h2>Skills</h2>
-          <p>제가 보유한 기술 스택입니다.</p>
-          <div class="skills__container">
-            <div class="skill-set">
+          <div class="section__heading">
+            <p class="eyebrow">Skills</p>
+            <h2>실무 중심 기술 스택</h2>
+          </div>
+          <div class="skills__grid">
+            <article class="skill-card">
+              <div class="skill-card__icon"><i class="fab fa-react"></i></div>
               <h3>Frontend</h3>
-              <ul>
-                <li>React, Next.js</li>
-                <li>Vue.js, Nuxt.js</li>
-                <li>JavaScript, TypeScript</li>
-                <li>HTML, CSS, SCSS</li>
-              </ul>
-            </div>
-            <div class="skill-set">
+              <p>TypeScript, JavaScript, React, Next.js, Vue, Nuxt, React Admin, Storybook</p>
+            </article>
+            <article class="skill-card">
+              <div class="skill-card__icon"><i class="fab fa-node-js"></i></div>
               <h3>Backend</h3>
-              <ul>
-                <li>Nest.js, Node.js, Express</li>
-                <li>Python, Flask</li>
-                <li>GraphQL</li>
-              </ul>
-            </div>
-            <div class="skill-set">
-              <h3>Database</h3>
-              <ul>
-                <li>MySQL, TypeORM</li>
-                <li>DynamoDB, SQL Server</li>
-                <li>MongoDB</li>
-              </ul>
-            </div>
-            <div class="skill-set">
-              <h3>DevOps & Tools</h3>
-              <ul>
-                <li>AWS, Ubuntu</li>
-                <li>Git, Sourcetree</li>
-                <li>Visual Studio Code</li>
-                <li>Slack, Redmine</li>
-              </ul>
-            </div>
+              <p>Node.js, NestJS, Express, Hono, Python, Django, Lambda, OpenAPI</p>
+            </article>
+            <article class="skill-card">
+              <div class="skill-card__icon"><i class="fas fa-database"></i></div>
+              <h3>Data</h3>
+              <p>MySQL, DynamoDB, SQL, PostgreSQL, SQL Server, SAP DB, Drizzle, TypeORM</p>
+            </article>
+            <article class="skill-card">
+              <div class="skill-card__icon"><i class="fab fa-aws"></i></div>
+              <h3>Cloud & Tools</h3>
+              <p>AWS EC2/S3/Cognito/Amplify, Docker, Git, Codespaces, Cursor, Claude Code, Codex</p>
+            </article>
           </div>
         </div>
       </section>
 
-      <!-- Work -->
+      <section id="experience" class="section section--light">
+        <div class="section__container">
+          <div class="section__heading">
+            <p class="eyebrow">Experience</p>
+            <h2>최근 실무 프로젝트</h2>
+          </div>
+          <div class="timeline">
+            <article class="timeline__item">
+              <time>2026.02 - 현재</time>
+              <div>
+                <h3>AI 채팅 시스템</h3>
+                <p>
+                  React, TypeScript, Clean Architecture 기반 화면/백엔드 개발, 버그 수정, PR 작성 및 리뷰 반영.
+                  Figma, Drizzle, Hono, Orval, Cursor, Gemini CLI를 활용한 애자일 개발.
+                </p>
+                <span>React · TypeScript · Hono · Drizzle · Clean Architecture</span>
+              </div>
+            </article>
+            <article class="timeline__item">
+              <time>2025.04 - 2025.09</time>
+              <div>
+                <h3>자동차 보험 연계 시스템</h3>
+                <p>
+                  Amplify Gen2와 Codespaces 기반으로 프론트/백엔드 개발, 화면 수정, OCR 이미지 인식 연계,
+                  PR 대응과 코드 품질 개선을 수행.
+                </p>
+                <span>React · TypeScript · DynamoDB · Amplify Gen2 · Gemini OCR</span>
+              </div>
+            </article>
+            <article class="timeline__item">
+              <time>2024.10 - 2025.03</time>
+              <div>
+                <h3>물류 관리 시스템</h3>
+                <p>
+                  React Admin과 마이크로 프론트엔드 구조에서 화면 수정, 버그 대응, 통합 테스트 환경 확인,
+                  Merge Request 작성 및 리뷰 피드백 반영.
+                </p>
+                <span>React · TypeScript · GitLab · Micro Frontend</span>
+              </div>
+            </article>
+            <article class="timeline__item">
+              <time>2024.02 - 2024.09</time>
+              <div>
+                <h3>교육 업계 교실 관리 시스템</h3>
+                <p>
+                  Next.js 기반 화면 제조, 테스트 사양서 작성, 공통 부품화, React Hook Form과 SWR Custom 패턴을
+                  활용한 화면 품질 개선.
+                </p>
+                <span>Next.js · TypeScript · Atomic Design · SWR · Backlog</span>
+              </div>
+            </article>
+            <article class="timeline__item">
+              <time>2021.09 - 2024.01</time>
+              <div>
+                <h3>WebView, 매장관리, WordPress, Vue/Nuxt 업무 시스템</h3>
+                <p>
+                  React/Vue/Nuxt 기반 SPA 개발, AWS Lambda API 개발, Cognito 사용자 관리, DynamoDB/GraphQL 연동,
+                  반응형 대응과 운영 보수 업무를 수행.
+                </p>
+                <span>React · Vue · Nuxt · Python · AWS · DynamoDB</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section id="work" class="section">
         <div class="section__container">
-          <h2>My Projects</h2>
-          <p>지금까지 진행했던 프로젝트들입니다.</p>
-          <div class="work__categories">
-            <button class="category__btn active" data-filter="*">All <span class="category__count">5</span></button>
-            <button class="category__btn" data-filter="fullstack">Full-stack <span class="category__count">2</span></button>
-            <button class="category__btn" data-filter="frontend">Frontend <span class="category__count">2</span></button>
-            <button class="category__btn" data-filter="mobile">Mobile <span class="category__count">1</span></button>
+          <div class="section__heading">
+            <p class="eyebrow">Personal Projects</p>
+            <h2>개인 프로젝트</h2>
+          </div>
+          <div class="work__categories" aria-label="프로젝트 필터">
+            <button class="category__btn active" type="button" data-filter="*">
+              All <span class="category__count">5</span>
+            </button>
+            <button class="category__btn" type="button" data-filter="fullstack">
+              Full-stack <span class="category__count">2</span>
+            </button>
+            <button class="category__btn" type="button" data-filter="frontend">
+              Frontend <span class="category__count">2</span>
+            </button>
+            <button class="category__btn" type="button" data-filter="mobile">
+              Mobile <span class="category__count">1</span>
+            </button>
           </div>
           <div class="work__projects">
-            <a href="http://parkbird.site/" target="_blank" class="project" data-type="fullstack">
+            <a href="http://parkbird.site/" target="_blank" rel="noreferrer" class="project" data-type="fullstack">
               <img src="image/project/sns.png" alt="ParkBird SNS" class="project__img" />
-              <div class="project__description">
-                <h3>ParkBird SNS (Twitter Clone)</h3>
-                <p>React, Next.js, Redux, Node.js, MySQL, AWS</p>
+              <div class="project__content">
+                <span>Full-stack</span>
+                <h3>ParkBird SNS</h3>
+                <p>React, Next.js, Redux, Node.js, MySQL, AWS 기반 Twitter Clone</p>
               </div>
             </a>
-            <a href="https://github.com/wngus6429/devblog" target="_blank" class="project" data-type="fullstack">
+            <a href="https://github.com/wngus6429/devblog" target="_blank" rel="noreferrer" class="project" data-type="fullstack">
               <img src="image/project/blog.png" alt="개발 블로그" class="project__img" />
-              <div class="project__description">
+              <div class="project__content">
+                <span>Full-stack</span>
                 <h3>개발 블로그</h3>
-                <p>React, Next.js, Node.js, MySQL</p>
+                <p>Next.js와 Node.js로 구성한 블로그 서비스</p>
               </div>
             </a>
-            <a href="https://wngus6429.github.io/parkflix" target="_blank" class="project" data-type="frontend">
+            <a href="https://wngus6429.github.io/parkflix" target="_blank" rel="noreferrer" class="project" data-type="frontend">
               <img src="image/project/react1.jpg" alt="Parkflix" class="project__img" />
-              <div class="project__description">
-                <h3>Parkflix (Movie Search)</h3>
-                <p>React, Styled Components, Movie API</p>
+              <div class="project__content">
+                <span>Frontend</span>
+                <h3>Parkflix</h3>
+                <p>React, Styled Components, Movie API 기반 영화 검색 UI</p>
               </div>
             </a>
-            <a href="https://wngus6429.github.io/JavaScriptMake/" target="_blank" class="project" data-type="frontend">
+            <a href="https://wngus6429.github.io/JavaScriptMake/" target="_blank" rel="noreferrer" class="project" data-type="frontend">
               <img src="image/project/javascript2.jpg" alt="Momentum" class="project__img" />
-              <div class="project__description">
-                <h3>Momentum (To-do & Weather)</h3>
-                <p>JavaScript, Weather API</p>
+              <div class="project__content">
+                <span>Frontend</span>
+                <h3>Momentum</h3>
+                <p>Vanilla JavaScript 기반 To-do, 날씨, 시계 앱</p>
               </div>
             </a>
-            <a href="https://github.com/wngus6429/ReactNative-Todo" target="_blank" class="project" data-type="mobile">
+            <a href="https://github.com/wngus6429/ReactNative-Todo" target="_blank" rel="noreferrer" class="project" data-type="mobile">
               <img src="image/project/native1.jpg" alt="React Native Todo App" class="project__img" />
-              <div class="project__description">
+              <div class="project__content">
+                <span>Mobile</span>
                 <h3>Todo App</h3>
-                <p>React Native, Expo</p>
+                <p>React Native와 Expo로 만든 모바일 Todo 앱</p>
               </div>
             </a>
           </div>
         </div>
       </section>
 
-      <!-- Contact -->
-      <section id="contact" class="section">
-        <div class="section__container">
-          <h2>Contact Me</h2>
-          <p>아래 이메일 또는 깃허브로 연락주세요.</p>
-          <p class="contact__email">wngus6429@gmail.com</p>
-          <div class="contact__links">
-            <a href="https://github.com/wngus6429" target="_blank" title="깃허브 프로필">
-              <i class="fab fa-github"></i>
-            </a>
+      <section id="contact" class="section contact">
+        <div class="section__container contact__container">
+          <div>
+            <p class="eyebrow">Contact</p>
+            <h2>함께 만들 서비스와 화면에 대해 이야기해 주세요.</h2>
+          </div>
+          <div class="contact__panel">
+            <a class="contact__email" href="mailto:wngus6429@gmail.com">wngus6429@gmail.com</a>
+            <div class="contact__links">
+              <a href="https://github.com/wngus6429" target="_blank" rel="noreferrer" title="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- Footer -->
     <footer id="footer">
-      <p>&copy; 2024 Juhyun Park. All rights reserved.</p>
+      <p>&copy; 2026 Juhyun Park. All rights reserved.</p>
     </footer>
 
-    <!-- Arrow up -->
-    <button class="arrow-up" aria-label="move to top">
+    <button class="arrow-up" type="button" aria-label="상단으로 이동">
       <i class="fas fa-arrow-up"></i>
     </button>
   </body>

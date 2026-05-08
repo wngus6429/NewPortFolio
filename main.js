@@ -2,83 +2,81 @@
 
 'use strict';
 
-// Header scroll event
 const header = document.querySelector('#header');
-const headerHeight = header.getBoundingClientRect().height;
-document.addEventListener('scroll', () => {
-  if (window.scrollY > headerHeight) {
-    header.classList.add('scrolled');
-  } else {
-    header.classList.remove('scrolled');
-  }
-});
-
-// Navbar menu click event
-const navbarMenu = document.querySelector('.header__menu');
-navbarMenu.addEventListener('click', (event) => {
-  const target = event.target;
-  const link = target.dataset.link;
-  if (link == null) {
-    return;
-  }
-  scrollIntoView(link);
-});
-
-// Navbar toggle button for mobile
+const navLinks = document.querySelectorAll('.header__menu__item');
 const navbarToggle = document.querySelector('.header__toggle');
-navbarToggle.addEventListener('click', () => {
-  header.classList.toggle('open');
-});
-
-// Home contact button click event
-const homeContact = document.querySelector('.home__contact');
-homeContact.addEventListener('click', () => {
-  scrollIntoView('#contact');
-});
-
-// Arrow up button
 const arrowUp = document.querySelector('.arrow-up');
-document.addEventListener('scroll', () => {
-  if (window.scrollY > headerHeight / 2) {
-    arrowUp.classList.add('visible');
-  } else {
-    arrowUp.classList.remove('visible');
-  }
-});
-
-arrowUp.addEventListener('click', () => {
-  scrollIntoView('#home');
-});
-
-// Project filtering
 const workCategories = document.querySelector('.work__categories');
 const projectContainer = document.querySelector('.work__projects');
 const projects = document.querySelectorAll('.project');
-workCategories.addEventListener('click', (e) => {
-  const filter = e.target.dataset.filter;
-  if (filter == null) {
+const sections = [...document.querySelectorAll('main section[id]')];
+
+function syncHeaderState() {
+  header.classList.toggle('scrolled', window.scrollY > 16);
+  arrowUp.classList.toggle('visible', window.scrollY > window.innerHeight * 0.45);
+}
+
+function closeMobileMenu() {
+  header.classList.remove('open');
+  navbarToggle.setAttribute('aria-expanded', 'false');
+}
+
+window.addEventListener('scroll', syncHeaderState);
+syncHeaderState();
+
+navbarToggle.addEventListener('click', () => {
+  const isOpen = header.classList.toggle('open');
+  navbarToggle.setAttribute('aria-expanded', String(isOpen));
+});
+
+navLinks.forEach((link) => {
+  link.addEventListener('click', () => {
+    closeMobileMenu();
+  });
+});
+
+arrowUp.addEventListener('click', () => {
+  document.querySelector('#home').scrollIntoView({ behavior: 'smooth' });
+});
+
+const sectionObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) {
+        return;
+      }
+
+      navLinks.forEach((link) => {
+        link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`);
+      });
+    });
+  },
+  {
+    rootMargin: '-35% 0px -55% 0px',
+    threshold: 0,
+  }
+);
+
+sections.forEach((section) => sectionObserver.observe(section));
+
+workCategories.addEventListener('click', (event) => {
+  const button = event.target.closest('.category__btn');
+
+  if (!button) {
     return;
   }
 
-  // Remove active class from previous button
-  const activeBtn = document.querySelector('.category__btn.active');
-  activeBtn.classList.remove('active');
-  e.target.classList.add('active');
+  const filter = button.dataset.filter;
+  document.querySelector('.category__btn.active')?.classList.remove('active');
+  button.classList.add('active');
 
   projectContainer.classList.add('anim-out');
-  setTimeout(() => {
+
+  window.setTimeout(() => {
     projects.forEach((project) => {
-      if (filter === '*' || filter === project.dataset.type) {
-        project.classList.remove('invisible');
-      } else {
-        project.classList.add('invisible');
-      }
+      const shouldShow = filter === '*' || filter === project.dataset.type;
+      project.classList.toggle('invisible', !shouldShow);
     });
     projectContainer.classList.remove('anim-out');
-  }, 300);
+  }, 180);
 });
-
-function scrollIntoView(selector) {
-  const scrollTo = document.querySelector(selector);
-  scrollTo.scrollIntoView({ behavior: 'smooth' });
-}
